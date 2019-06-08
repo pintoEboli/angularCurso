@@ -6,8 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Directiva dirNgFor';
+  title  = 'Directiva dirNgFor';
   title2 = 'Cursos Opcionales';
+  title3 = 'Ejemplo del ngSwitch';
     
   //Defino un array de nombres
   public nombres = [
