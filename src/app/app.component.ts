@@ -11,9 +11,9 @@ export class AppComponent {
     
   //Defino un array de nombres
   public nombres = [
-    {nom:"uno",edad:10},
-    {nom:"dos",edad:20},
-    {nom:"tres",edad:30}
+    {nom:"uno",edad:10,color:'blue'},
+    {nom:"dos",edad:20,color:'red'},
+    {nom:"tres",edad:30,color:'yellow'}
   ];
 
   //Defino un array de curso

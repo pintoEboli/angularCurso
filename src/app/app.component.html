@@ -23,3 +23,22 @@
 <div class="container"><br>
     <h3>{{ texto }}</h3>
 </div>
+<hr>
+<!-- los elementos ngSwitch del ejemplo  -->
+<div>
+    <h2>{{ title2 }}</h2>
+    <div *ngFor="let nombre of nombres; let i=index">
+        <div [ngSwitch]="nombre.color">
+            <!-- Ojo en el case se coloca el valor dentro de '' para que se entere que la comparación es contra un String -->
+            <div *ngSwitchCase="'blue'" style="background-color: blue;margin-bottom: 5px;">
+                <span>nombre: {{ nombre.nom }}</span>
+            </div>
+            <div *ngSwitchCase="'red'" style="background-color: red;margin-bottom: 5px;">
+                <span>nombre: {{ nombre.nom }}</span>
+            </div>
+            <div *ngSwitchCase="'yellow'" style="background-color: yellow;margin-bottom: 5px;">
+                <span>nombre: {{ nombre.nom }}</span>
+            </div>
+        </div>
+    </div>
+</div>

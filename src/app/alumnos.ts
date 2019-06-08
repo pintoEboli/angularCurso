@@ -16,3 +16,4 @@ export class Alumnos {
         this.fecha = fecha;
         this.telefono = telefono;
     }
+}   
