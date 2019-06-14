@@ -6,14 +6,18 @@
         <div [ngSwitch]="nombre.color">
             <!-- Ojo en el case se coloca el valor dentro de '' para que se entere que la comparación es contra un String -->
             <div *ngSwitchCase="'blue'" [ngClass]="{'classBlue':nombre.color=='blue'}">
-                <span>nombre: {{ nombre.nom }}</span>
+                <span *ngIf="nombre.hidden">nombre: {{ nombre.nom }}</span>
             </div>
             <div *ngSwitchCase="'red'" [ngClass]="{'classRed':nombre.color=='red'}">
-                <span [ngStyle]="{'color': color}">nombre: {{ nombre.nom }}</span>
+                <span [ngStyle]="{'color': color}" *ngIf="nombre.hidden">nombre: {{ nombre.nom }}</span>
             </div>
             <div *ngSwitchCase="'yellow'" [ngClass]="{'classYellow':nombre.color=='yellow'}">
                 <!-- Esta directiva esconde la etiqueta <HTML> pero no la elimina del arbol DOM -->
-                <span [hidden]="nombre.color == 'yellow'">nombre: {{ nombre.nom }}</span>
+                <span *ngIf="nombre.hidden">nombre: {{ nombre.nom }}</span>
+            </div>
+            <div *ngSwitchCase="'pink'" [ngClass]="{'classPink':nombre.color=='pink'}">
+                <!-- Esta directiva esconde la etiqueta <HTML> pero no la elimina del arbol DOM -->
+                <span *ngIf="nombre.hidden">nombre: {{ nombre.nom }}</span>
             </div>
         </div>
     </div>

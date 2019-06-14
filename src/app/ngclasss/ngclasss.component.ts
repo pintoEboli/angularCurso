@@ -11,9 +11,10 @@ export class NgclasssComponent implements OnInit {
 
   //Defino un array de nombres
   public nombres = [
-    {nom:"uno",edad:10,color:"blue"},
-    {nom:"dos",edad:20,color:"red"},
-    {nom:"tres",edad:30,color:"yellow"}
+    {nom:"uno",edad:10,color:"blue",hidden:true},
+    {nom:"dos",edad:20,color:"red",hidden:false},
+    {nom:"tres",edad:30,color:"yellow",hidden:true},
+    {nom:"cuatros",edad:40,color:"pink",hidden:true}
   ];
 
 
