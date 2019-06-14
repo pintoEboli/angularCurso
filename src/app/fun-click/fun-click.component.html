@@ -1,0 +1,14 @@
+<!-- con la directiva con la funsion -->
+<hr>
+<div>
+    <h2>{{ titleFunClick }}</h2>
+    <div *ngFor="let alumno of alumnosArr; let i=index">
+        <div [ngClass]="{'classRed':alumno.curso == 1222}">
+            <span *ngIf="alumno.activo">nombre: {{ alumno.nom }}, Apellido: {{ alumno.apellido }}, Curso: {{ alumno.curso}} </span>
+            <button (click)="eliminarDatos($event,i)">Baja</button>
+        </div>
+    </div>
+    <div *ngIf="arrayvacio">
+        <button (click)="cargarArr()">Cargar Alumnos</button>
+    </div>
+</div>
